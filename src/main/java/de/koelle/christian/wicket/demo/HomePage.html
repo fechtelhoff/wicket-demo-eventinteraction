@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta charset="utf-8" />
+	<title>Apache Wicket Quickstart</title>
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link rel="stylesheet"
+	      href="style.css"
+	      type="text/css"
+	      media="screen"
+	      title="Stylesheet" />
+</head>
+<body>
+<div id="hd">
+	<div id="logo">
+		<img src="logo.png"
+		     width="50px"
+		     height="50px"
+		     alt="Wicket Logo" />
+		<h1>Apache Wicket</h1>
+	</div>
+</div>
+<div id="bd"
+     wicket:id="mainpanel">
+	<h3>Wicket Model Event Interaction Demo</h3>
+	<div class="containerSelection">
+		<div>
+			A=
+			<wicket:container wicket:id="selectionA" />
+		</div>
+		<div>
+			B=
+			<wicket:container wicket:id="selectionB" />
+		</div>
+		<div>
+			C=
+			<wicket:container wicket:id="selectionC" />
+		</div>
+	</div>
+	<h5>Use Case</h5>
+	<p>| Selection B choices are depending on selection A | Selection C choices are depending on selection B | If there is only one subsequent
+		selection choice, it should be selected automatically |</p>
+
+	<form wicket:id="form">
+		<button type="submit"
+		        value="Submit"
+		        wicket:id="buttonA">Write random A value to first selection input
+		</button>
+	</form>
+
+	<div class="contentwrapper">
+		<div class="a">
+			<h5>Selection input</h5>
+			<section>
+				<select wicket:id="choiceA" />
+			</section>
+			<section>
+				<select wicket:id="choiceB" />
+			</section>
+			<section>
+				<select wicket:id="choiceC" />
+			</section>
+		</div>
+		<div class="b">
+
+			<h5>Selection model</h5>
+			<code class="multilinemonotext"
+			      wicket:id="selectionModelOutput" />
+		</div>
+	</div>
+</div>
+<div id="ft">
+</div>
+</body>
+</html>
