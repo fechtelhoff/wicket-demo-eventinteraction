@@ -38,7 +38,7 @@ public class HomePage extends WebPage {
 
 	public HomePage(final PageParameters parameters) {
 		super(parameters);
-		selectionModelB.setVisible(Boolean.TRUE);
+		selectionModelA.setVisible(Boolean.TRUE);
 		selectionModelB.setVisible(Boolean.FALSE);
 		selectionModelC.setVisible(Boolean.FALSE);
 	}
